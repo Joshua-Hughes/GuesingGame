@@ -19,7 +19,8 @@ for (int i = 1; i <= tries; i++)
 Console.Write($"Guess {i} out of 4:  ");
 
 string guess = Console.ReadLine();
-
+int guessInt;
+Int32.TryParse(guess, out guessInt);
 
     if (guess == correctNumber.ToString())
     {
@@ -28,11 +29,11 @@ string guess = Console.ReadLine();
     }
     else if (i < tries)
     {
-        if (Int32.Parse(guess) > correctNumber)
+        if (guessInt > correctNumber)
         {
             Console.WriteLine("Incorrect! Your guess was too high!");
         }
-        else if (Int32.Parse(guess) < correctNumber)
+        else if (guessInt < correctNumber)
         {
             Console.WriteLine("Incorrect! Your guess was too low!");
         }
