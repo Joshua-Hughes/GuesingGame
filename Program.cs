@@ -28,7 +28,14 @@ string guess = Console.ReadLine();
     }
     else if (i < tries)
     {
-        Console.WriteLine("Incorrect! Try Again!");
+        if (Int32.Parse(guess) > correctNumber)
+        {
+            Console.WriteLine("Incorrect! Your guess was too high!");
+        }
+        else if (Int32.Parse(guess) < correctNumber)
+        {
+            Console.WriteLine("Incorrect! Your guess was too low!");
+        }
         
     }
     else
