@@ -16,7 +16,7 @@ Console.WriteLine("------------------------");
 for (int i = 1; i <= tries; i++)
 {
 
-Console.Write(">");
+Console.Write($"Guess {i}/4 > ");
 
 string guess = Console.ReadLine();
 
